@@ -10,7 +10,7 @@ and to answer a very practical question for myself:
 
 > *“If I want to get good at BedWars, what do top players actually look like in the data?”*
 
-## 🎯 What this project demonstrates
+## What this project demonstrates
 
 **Data Analytics skills**
 
@@ -44,7 +44,7 @@ and to answer a very practical question for myself:
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - **Language:** Python
 - **Data collection:** Pika Network public stats API
@@ -56,7 +56,7 @@ and to answer a very practical question for myself:
 
 ---
 
-## 📂 Repository structure
+## Repository structure
 
 This repo follows the Google Data Analytics course structure:
 
@@ -114,7 +114,7 @@ Key files:
 
 ---
 
-## 🔄 Data flow / pipeline
+## Data flow / pipeline
 
 1. **Ask**
 
@@ -190,7 +190,7 @@ The script will:
 
 ---
 
-## 📌 Project status
+## Project status
 
 * ✅ **01_Ask** - initial planning and data source design
 * ✅ **02_Prepare** - Python extraction and CSV exports
@@ -200,7 +200,7 @@ The script will:
 
 ---
 
-## 💼 Why this is relevant for data roles
+## Why this is relevant for data roles
 
 Even though the dataset is from a game, the skills are directly transferable:
 
