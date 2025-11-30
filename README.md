@@ -154,7 +154,7 @@ Key files:
 
 ---
 
-## ⚙️ How to run parts of this project
+## How to run parts of this project
 
 > This project is mainly a **case study**, but parts of it are reproducible.
 > API behaviour and leaderboard contents may have changed since this snapshot.
