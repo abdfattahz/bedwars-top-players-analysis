@@ -1,26 +1,36 @@
-1. importing stats collected from the script to sheet named BW Case Study
-2. the leaderboard stats is imported under the Leaderboard sheet
-3. the player's stats imported under the PlayerStats sheet. 
-4. using vlookup to merge placement with players name
-5. using vlookup to add clan in it too
-6. relise that if i use the same function as the placement, if the player didnt join any clan, it will leave blank column.
-7. decided to use IF function so that if the player did not join any clan it will fill the column with N/A instead
-8. decided to use INDEX/MATCH for win rate kdr, fkdr, bow accuracy and beds per win
-9. the calculation gave too many decimal point. i change it to % for easier analysis
-10. the formula for winrate is, 
-win = wins / total attempt
-total attempt = wins + losses
-11. changed K/D format to numbers so it displays 2 decimal point only
-K/D = Kills / Death
-12. FKDR = Final kills / Final Death
-13. changed the FKDR format to numbers so that it will only display 2 decimal point
-14.  changed the bow accuracy to % for easier analysis
-bow accuracy = arrow shot / arrow hit
-15. not all kills are presented inside this data. so i decided to put unclassified kills into the playerstats sheet.
-this includes : player kills using items under others or rotational category in the shop eg. golem, fireballs, other weapons (only track swords and punch's kills), etc
-16. added melee/ranged ratio
-17. need to compute the percentage of each kill type later
-% Melee = MeleeKills / TotalKills
-% Bow = BowKills / TotalKills
-% Void = VoidKills / TotalKills
-18. change all the % to decimal to make everything consistent. and easy to transfer the data to mySQL
+# Google Sheets Processing Log
+
+1. Imported the stats collected from the Python script into a sheet named **BW Case Study**.
+2. Imported leaderboard stats into the **Leaderboard** sheet.
+3. Imported individual player stats into the **PlayerStats** sheet.
+4. Used **VLOOKUP** to merge leaderboard placement with player names.
+5. Added clan information using another **VLOOKUP**.
+6. Realised that if a player had no clan, the VLOOKUP returned a blank value.
+7. Switched to an **IF** function so players without a clan would display **N/A** instead of a blank cell.
+8. Used **INDEX/MATCH** to compute the following derived metrics:
+   - win rate  
+   - K/D  
+   - FKDR  
+   - bow accuracy  
+   - beds per win
+9. The initial calculations showed too many decimal places, so I changed the formats to **percentages** for easier reading.
+10. Win rate formula:
+    - `total attempts = wins + losses`  
+    - `win rate = wins / total attempts`
+11. Changed the **K/D** cell format to “Number (2 decimal places)”:
+    - `K/D = kills / deaths`
+12. Defined **FKDR** as:
+    - `FKDR = final_kills / final_deaths`
+13. Updated FKDR format to “Number (2 decimal places)” for consistency.
+14. Changed **bow accuracy** to a percentage format for readability:
+    - `bow accuracy = arrows_hit / arrows_shot`
+15. Not all kill types were clearly represented in the dataset, so I created an **unclassified kills** field in `PlayerStats`.  
+    This includes:
+    - kills using items under “Other” or “Rotational” categories in the shop (e.g., golem, fireballs)  
+    - weapon kills only track sword and punch kills
+16. Added a **melee/ranged ratio** metric.
+17. Planned to compute kill-type percentages later:
+    - `% Melee = MeleeKills / TotalKills`  
+    - `% Bow = BowKills / TotalKills`  
+    - `% Void = VoidKills / TotalKills`
+18. Converted all percentage fields back to **decimal values** to make formats consistent and to ensure smooth import into MySQL.
